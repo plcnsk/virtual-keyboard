@@ -3,7 +3,6 @@ import Control from "./common/control";
 const board = {
   'Digit1': '1',
   'Digit2': '2',
-  'Digit3': '3',
 }
 
 export class Keyboard extends Control {
