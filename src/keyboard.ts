@@ -25,6 +25,10 @@ export class Keyboard extends Control {
       this.board.setLanguage(this.languages[this.langIndex]);
     }
 
+    this.board.onBackspace = ()=>{
+      this.output.content = this.output.content.slice(0, -1);
+    }
+
     document.addEventListener('keydown', (e)=>{
       console.log(e.code);
       this.board.handleDown(e.code);
