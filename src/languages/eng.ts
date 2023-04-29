@@ -1,6 +1,7 @@
-export const boardEng = {
+const boardEng = {
   'Digit1': 'a',
-  'Digit2': 'b'
+  'Digit2': 'b',
+  'Lang': 'Lang'
 }
 
 export default boardEng;
