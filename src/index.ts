@@ -6,6 +6,6 @@ const state = new KeyboardState({
   langIndex: 0,
 });
 
-const keyboard = new Keyboard(document.body);
+const keyboard = new Keyboard(document.body, state);
 
 (window as any).keyboard = keyboard;

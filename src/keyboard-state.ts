@@ -1,4 +1,6 @@
 import Signal from "./common/signal";
+import board from "./languages/eng";
+import board1 from "./languages/rus";
 
 interface IKeyboardData {
   content: string;
@@ -6,6 +8,11 @@ interface IKeyboardData {
 }
 
 export class KeyboardState {
+  public languages = [
+    board,
+    board1
+  ];
+
   private _data: IKeyboardData;
   get data(){
     return this._data;
