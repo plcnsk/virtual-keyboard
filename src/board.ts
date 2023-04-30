@@ -2,17 +2,27 @@ import Control from "./common/control";
 import { Key } from "./keys/key"
 import { KeyLang } from "./keys/keyLang"
 import { KeyBackspace } from "./keys/keyBackspace"
-import {KeyboardState} from './keyboard-state';
+import { KeyCapsLock } from "./keys/keyCapsLock"
+import { KeyShift } from "./keys/keyShift"
+import {KeyboardState} from './keyboard-state'; 
+
+const classMap: Record<string, typeof Key> = {
+  'Backspace': KeyBackspace,
+  'ShiftLeft': KeyShift,
+  'ShiftRight': KeyShift,
+  'CapsLock': KeyCapsLock,
+  'Lang': KeyLang,
+}
 
 export class Board extends Control {
   private keyMap: Record<string, Key> = {};
-  onNextLanguage: ()=>void;
-  onBackspace: ()=>void;
+  //onNextLanguage: ()=>void;
+  //onBackspace: ()=>void;
 
-  constructor(parentNode:HTMLElement, boardConfig: Record<string, string>, state: KeyboardState){
+  constructor(parentNode:HTMLElement, layoutConfig: Array<Array<string>>, state: KeyboardState){
     super(parentNode);
-    for (let keyCode in boardConfig) {
-      let key: Key = null;
+    //for (let keyCode in boardConfig) {
+      /*let key: Key = null;
       switch(keyCode){
         case "Lang":
           key = new KeyLang(this.node, boardConfig[keyCode], state);
@@ -22,9 +32,15 @@ export class Board extends Control {
         break;
         default:
           key = new Key(this.node, boardConfig[keyCode], state);
-      }
-      this.keyMap[keyCode] = key;
-    }
+      }*/
+      layoutConfig.forEach(raw=>{
+        raw.forEach(keyCode=>{
+          const KeyConstructor = classMap[keyCode] || Key;
+          const key = new KeyConstructor(this.node, keyCode, state);
+          this.keyMap[keyCode] = key;
+        })
+      })
+      
   }
 
   setLanguage(boardConfig: Record<string, string>){
