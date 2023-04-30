@@ -16,31 +16,16 @@ const classMap: Record<string, typeof Key> = {
 
 export class Board extends Control {
   private keyMap: Record<string, Key> = {};
-  //onNextLanguage: ()=>void;
-  //onBackspace: ()=>void;
 
   constructor(parentNode:HTMLElement, layoutConfig: Array<Array<string>>, state: KeyboardState){
     super(parentNode);
-    //for (let keyCode in boardConfig) {
-      /*let key: Key = null;
-      switch(keyCode){
-        case "Lang":
-          key = new KeyLang(this.node, boardConfig[keyCode], state);
-        break;
-        case "Backspace":
-          key = new KeyBackspace(this.node, boardConfig[keyCode], state);
-        break;
-        default:
-          key = new Key(this.node, boardConfig[keyCode], state);
-      }*/
       layoutConfig.forEach(raw=>{
         raw.forEach(keyCode=>{
           const KeyConstructor = classMap[keyCode] || Key;
           const key = new KeyConstructor(this.node, keyCode, state);
           this.keyMap[keyCode] = key;
         })
-      })
-      
+      })  
   }
 
   setLanguage(boardConfig: Record<string, string>){

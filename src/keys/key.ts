@@ -3,13 +3,11 @@ import {KeyboardState} from '../keyboard-state';
 
 
 export class Key extends Control {
-  //private onInput: (char:string)=>void;
   private data:string;
 
   constructor(parentNode:HTMLElement, data:string, protected state: KeyboardState){
     super(parentNode);
     this.data = data;
-    //this.onInput = onInput;
     this.node.textContent = data;
     this.node.onmousedown = () => {
       this.down();

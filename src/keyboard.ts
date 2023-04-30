@@ -1,18 +1,12 @@
 import Control from "./common/control";
 import {Output} from "./output";
 import {Board} from "./board";
-// import board from "./languages/eng"
-// import board1 from "./languages/rus"
 import {IKeyboardData, KeyboardState} from './keyboard-state';
 import layout from "./languages/layout";
 
 export class Keyboard extends Control {
   private output: Output;
   private board: Board;
-  // private languages = [
-  //   board,
-  //   board1
-  // ];
   private langIndex = 0;
 
   constructor(parentNode:HTMLElement, state:KeyboardState){
@@ -32,15 +26,6 @@ export class Keyboard extends Control {
     state.onChange.add(update);
     this.output = new Output(this.node);
     this.board = new Board(this.node, layout, state);
-
-    // this.board.onNextLanguage = ()=>{
-    //   this.langIndex = (this.langIndex + 1) % this.languages.length;
-    //   this.board.setLanguage(this.languages[this.langIndex]);
-    // }
-
-    // this.board.onBackspace = ()=>{
-    //   this.output.content = this.output.content.slice(0, -1);
-    // }
 
     document.addEventListener('keydown', (e)=>{
       console.log(e.code);
