@@ -1,28 +1,28 @@
 import Control from "../common/control";
-import {KeyboardState} from '../keyboard-state';
+import {KeyboardState} from '../keyboardState';
 
 
-export class Key extends Control {
+export class Key extends Control { 
   private data:string;
 
   constructor(parentNode:HTMLElement, data:string, protected state: KeyboardState){
     super(parentNode);
     this.data = data;
     this.node.textContent = data;
-    this.node.onmousedown = () => {
+    this.node.onmousedown = ()=>{
       this.down();
     }
 
-    this.node.onmouseup = () => {
+    this.node.onmouseup = ()=>{
       this.input();
       this.up();
     }
     
-    this.node.onmouseenter = () => {
+    this.node.onmouseenter = ()=>{
 
     }
     
-    this.node.onmouseleave = () => {
+    this.node.onmouseleave = ()=>{
 
     }
   }

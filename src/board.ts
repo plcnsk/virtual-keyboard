@@ -4,12 +4,11 @@ import { KeyLang } from "./keys/keyLang"
 import { KeyBackspace } from "./keys/keyBackspace"
 import { KeyCapsLock } from "./keys/keyCapsLock"
 import { KeyShift } from "./keys/keyShift"
-import {KeyboardState} from './keyboard-state'; 
+import {KeyboardState} from './keyboardState'; 
 
 const classMap: Record<string, typeof Key> = {
   'Backspace': KeyBackspace,
   'ShiftLeft': KeyShift,
-  'ShiftRight': KeyShift,
   'CapsLock': KeyCapsLock,
   'Lang': KeyLang,
 }
@@ -19,8 +18,8 @@ export class Board extends Control {
 
   constructor(parentNode:HTMLElement, layoutConfig: Array<Array<string>>, state: KeyboardState){
     super(parentNode);
-      layoutConfig.forEach(raw=>{
-        raw.forEach(keyCode=>{
+      layoutConfig.forEach(row=>{
+        row.forEach(keyCode=>{
           const KeyConstructor = classMap[keyCode] || Key;
           const key = new KeyConstructor(this.node, keyCode, state);
           this.keyMap[keyCode] = key;

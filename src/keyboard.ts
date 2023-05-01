@@ -1,7 +1,7 @@
 import Control from "./common/control";
 import {Output} from "./output";
 import {Board} from "./board";
-import {IKeyboardData, KeyboardState} from './keyboard-state';
+import {IKeyboardData, KeyboardState} from './keyboardState';
 import layout from "./languages/layout";
 
 export class Keyboard extends Control {

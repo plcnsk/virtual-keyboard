@@ -2,13 +2,14 @@ import {Key} from "./key";
 
 export class KeyShift extends Key{
   protected input(){
-    }
+
+  }
 
   protected down(){
     const state = this.state;
     state.data = {
       ...state.data,
-      shift: true  
+      shift: true
     } 
   }
 
@@ -16,7 +17,7 @@ export class KeyShift extends Key{
     const state = this.state;
     state.data = {
       ...state.data,
-      shift: false
+      shift: false 
     }
   }
 }
