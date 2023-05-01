@@ -2,6 +2,8 @@ import {Keyboard} from './keyboard';
 import {KeyboardState} from './keyboardState';
 import './style.css';
 
+
+
 const state = new KeyboardState({
   content: '',
   langIndex: 0,
