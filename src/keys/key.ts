@@ -6,7 +6,7 @@ export class Key extends Control {
   private data:string;
 
   constructor(parentNode:HTMLElement, data:string, protected state: KeyboardState){
-    super(parentNode);
+    super(parentNode, 'div', 'keyboard_key');
     this.data = data;
     this.node.textContent = data;
     this.node.onmousedown = ()=>{
@@ -19,11 +19,11 @@ export class Key extends Control {
     }
     
     this.node.onmouseenter = ()=>{
-
+      this.node.classList.add('keyboard_key__hover');
     }
     
     this.node.onmouseleave = ()=>{
-
+      this.node.classList.remove('keyboard_key__hover');
     }
   }
 
@@ -40,9 +40,14 @@ export class Key extends Control {
     const state = this.state;
     state.data = {...state.data, content: state.data.content + this.data}
   }
-
-  protected up(){}
-  protected down(){}
+  
+  protected down(){
+    this.node.classList.add('keyboard_key__down');
+  }
+  
+  protected up(){
+    this.node.classList.remove('keyboard_key__down');
+  }
 
   setData(data:string){
     this.data = data;

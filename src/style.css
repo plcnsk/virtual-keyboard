@@ -2,14 +2,30 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d2dce5;
+}
+
+.keyboard_output {
+  border: solid 1px;
+  min-height: 130px;
+  width: 768px;
+  margin-bottom: 15px;
+}
+
 .keyboard_row {
   display: flex;
   user-select: none;
+  width: 768px;
+  height: 45px;
 }
 
 .keyboard_key {
   margin: 2px;
-  background-color: #000;
+  background-color: #0e0e0e;
   color: #fff;
   padding: 5px;
   flex-basis: 100%; 
@@ -36,11 +52,6 @@
 
 .keyboard_wrapper {
   border: solid Ipx;
-} 
-
-.keyboard_output {
-  border: solid 1px;
-  min-height: 100px;
 }
  
 .hl_1 {

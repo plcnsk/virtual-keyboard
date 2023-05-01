@@ -2,7 +2,6 @@ import {Key} from "./key";
 
 export class KeyShift extends Key{
   protected input(){
-
   }
 
   protected down(){
@@ -10,7 +9,8 @@ export class KeyShift extends Key{
     state.data = {
       ...state.data,
       shift: true
-    } 
+    }
+    super.down();
   }
 
   protected up(){
@@ -19,5 +19,6 @@ export class KeyShift extends Key{
       ...state.data,
       shift: false 
     }
+    super.up();
   }
 }

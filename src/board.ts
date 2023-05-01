@@ -19,9 +19,10 @@ export class Board extends Control {
   constructor(parentNode:HTMLElement, layoutConfig: Array<Array<string>>, state: KeyboardState){
     super(parentNode);
       layoutConfig.forEach(row=>{
+        const rowView = new Control(this.node, 'div', 'keyboard_row');
         row.forEach(keyCode=>{
           const KeyConstructor = classMap[keyCode] || Key;
-          const key = new KeyConstructor(this.node, keyCode, state);
+          const key = new KeyConstructor(rowView.node, keyCode, state);
           this.keyMap[keyCode] = key;
         })
       })  
