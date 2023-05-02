@@ -14,7 +14,7 @@ const functional = {
   "ArrowLeft": "",
   "ArrowDown": "",
   "ArrowRight": "",
-  "Lang": "Fn",
+  "Lang": "fn lang",
 }
 
 const base = {
