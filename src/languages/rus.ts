@@ -61,7 +61,7 @@ const base = {
   "ArrowLeft": "",
   "ArrowDown": "",
   "ArrowRight": "",
-  "Lang": "",
+  "Lang": "fn lang",
 };
 
 const shift = {
@@ -127,7 +127,7 @@ const shift = {
   "ArrowLeft": "",
   "ArrowDown": "",
   "ArrowRight": "",
-  "Lang": "",
+  "Lang": "fn lang",
 };
 
 const caps = {
@@ -193,7 +193,7 @@ const caps = {
   "ArrowLeft": "",
   "ArrowDown": "",
   "ArrowRight": "",
-  "Lang": "",
+  "Lang": "fn lang",
 };
 
 export default {base, shift, caps};

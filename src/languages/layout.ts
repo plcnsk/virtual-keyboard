@@ -73,6 +73,7 @@ export const layout = [
     "ShiftRight",
   ],
   [
+    "Lang",
     "ControlLeft",
     "AltLeft",
     "Space",
@@ -81,7 +82,6 @@ export const layout = [
     "ArrowLeft",
     "ArrowDown",
     "ArrowRight",
-    "Lang",
   ]
 ];
 
@@ -140,6 +140,7 @@ export const eng: Record<string, string> = {
   "Slash": "/",
   "ArrowUp": "",
   "ShiftRight": "",
+  "Lang": "fn lang",
   "ControlLeft": "",
   "AltLeft": "",
   "Space": " ",
@@ -148,7 +149,6 @@ export const eng: Record<string, string> = {
   "ArrowLeft": "",
   "ArrowDown": "",
   "ArrowRight": "",
-  "Lang": "",
 };
 
 export const rus: Record<string, string> = {
@@ -206,6 +206,7 @@ export const rus: Record<string, string> = {
   "Slash": "/",
   "ArrowUp": "",
   "ShiftRight": "",
+  "Lang": "fn lang",
   "ControlLeft": "",
   "AltLeft": "",
   "Space": " ",
@@ -214,7 +215,6 @@ export const rus: Record<string, string> = {
   "ArrowLeft": "",
   "ArrowDown": "",
   "ArrowRight": "",
-  "Lang": "",
 };
 
 export default layout;
