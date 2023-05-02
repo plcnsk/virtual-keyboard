@@ -1,3 +1,30 @@
+/*const base = {
+  'Digit1': 'a',
+  'Digit2': 'b',
+  'Backspace': 'Backspace',
+  'ShiftLeft': 'Shift',
+  'CapsLock': 'Caps',
+  'Lang': 'Lang'
+}
+
+const shift = {
+  'Digit1': 'A',
+  'Digit2': 'B',
+  'Backspace': 'Backspace',
+  'ShiftLeft': 'Shift',
+  'CapsLock': 'Caps',
+  'Lang': 'Lang'
+}
+
+const caps = {
+  'Digit1': '+',
+  'Digit2': '-',
+  'Backspace': 'Backspace',
+  'ShiftLeft': 'Shift',
+  'CapsLock': 'Caps',
+  'Lang': 'Lang'
+}*/
+
 const base = {
   "Backquote": "`",
   "Digit1": "1",
@@ -61,7 +88,7 @@ const base = {
   "ArrowLeft": "",
   "ArrowDown": "",
   "ArrowRight": "",
-  "Lang": "fn lang",
+  "Lang": "",
 };
 
 const shift = {
@@ -127,7 +154,7 @@ const shift = {
   "ArrowLeft": "",
   "ArrowDown": "",
   "ArrowRight": "",
-  "Lang": "fn lang",
+  "Lang": "",
 };
 
 const caps = {
@@ -193,7 +220,7 @@ const caps = {
   "ArrowLeft": "",
   "ArrowDown": "",
   "ArrowRight": "",
-  "Lang": "fn lang",
+  "Lang": "",
 };
 
 export default {base, shift, caps};
