@@ -50,11 +50,11 @@ body {
 }
 
 .keyboard_key__hover {
-  background-color: #222;
+  background-color: #373737;
 }
 
 .keyboard_wrapper {
-  border: solid Ipx;
+  border: solid 1px;
 }
  
 .hl_1 {
