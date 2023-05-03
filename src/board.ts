@@ -9,6 +9,7 @@ import {KeyboardState} from './keyboardState';
 const classMap: Record<string, typeof Key> = {
   'Backspace': KeyBackspace,
   'ShiftLeft': KeyShift,
+  'ShiftRight': KeyShift,
   'CapsLock': KeyCapsLock,
   'Lang': KeyLang,
 }
