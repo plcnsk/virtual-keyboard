@@ -5,13 +5,12 @@ const layoutTest = [
     'Backspace',
     'ShiftLeft',
     'CapsLock',
-    'Lang'
+    'lower-left',
   ]
 ]
 
 export const layout = [
   [
-    "Backquote",
     "Digit1",
     "Digit2",
     "Digit3",
@@ -40,7 +39,6 @@ export const layout = [
     "KeyP",
     "BracketLeft",
     "BracketRight",
-    "Backslash",
   ],
   [
     "CapsLock",
@@ -55,10 +53,12 @@ export const layout = [
     "KeyL",
     "Semicolon",
     "Quote",
+    "Backslash",
     "Enter",
   ],
   [
     "ShiftLeft",
+    "Backquote",
     "KeyZ",
     "KeyX",
     "KeyC",
@@ -76,9 +76,10 @@ export const layout = [
     "Lang",
     "ControlLeft",
     "AltLeft",
+    "MetaLeft",
     "Space",
+    "MetaRight",
     "AltRight",
-    "ControlRight",
     "ArrowLeft",
     "ArrowDown",
     "ArrowRight",
